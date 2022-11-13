@@ -1,0 +1,110 @@
+/*************************************************************************
+ * Copyright (C) 2022 Vince Jerald Villamora @ https://vincejv.com       *
+ *                                                                       *
+ * Licensed under the Apache License, Version 2.0 (the "License");       *
+ * you may not use this file except in compliance with the License.      *
+ * You may obtain a copy of the License at                               *
+ *                                                                       *
+ *   http://www.apache.org/licenses/LICENSE-2.0                          *
+ *                                                                       *
+ * Unless required by applicable law or agreed to in writing, software   *
+ * distributed under the License is distributed on an "AS IS" BASIS,     *
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or       *
+ * implied. See the License for the specific language governing          *
+ * permissions and limitations under the License.                        *
+ *************************************************************************/
+
+package com.abavilla.fpi.viber.ext.dto;
+
+import static com.abavilla.fpi.fw.util.FWConst.UNKNOWN_PREFIX;
+
+import java.util.EnumSet;
+import java.util.HashMap;
+import java.util.Map;
+
+import com.abavilla.fpi.fw.dto.AbsDto;
+import com.abavilla.fpi.fw.entity.enums.IBaseEnum;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.quarkus.runtime.annotations.RegisterForReflection;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+@Data
+@EqualsAndHashCode(callSuper = true)
+@ToString(callSuper = true)
+@NoArgsConstructor
+@RegisterForReflection
+public class Message extends AbsDto {
+  private String text;
+  private Type type;
+
+  @Getter
+  @AllArgsConstructor
+  public enum Type implements IBaseEnum {
+    UNKNOWN(-1, UNKNOWN_PREFIX),
+    TEXT(1, "text"),
+    PICTURE(2, "picture"),
+    FILE(3, "file"),
+    VIDEO(4, "video"),
+    CONTACT(5, "contact"),
+    LOCATION(6, "location"),
+    URL(7, "url"),
+    STICKER(8, "sticker"),
+    RICH_MEDIA(9, "rich_media");
+
+    /**
+     * Ordinal id to enum mapping
+     */
+    private static final Map<Integer, IBaseEnum> ENUM_MAP = new HashMap<>();
+
+    static {
+      for(IBaseEnum w : EnumSet.allOf(Type.class))
+        ENUM_MAP.put(w.getId(), w);
+    }
+
+    /**
+     * The enum ordinal id
+     */
+    private final int id;
+
+    /**
+     * The enum value
+     */
+    private final String value;
+
+    /**
+     * Creates an enum based from given string value
+     *
+     * @param value the string value
+     * @return the created enum
+     */
+    @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
+    public static Type fromValue(String value) {
+      return (Type) IBaseEnum.fromValue(value, ENUM_MAP, UNKNOWN);
+    }
+
+    /**
+     * Creates an enum based from given an ordinal id
+     *
+     * @param id the ordinal id
+     * @return the created enum
+     */
+    public static Type fromId(int id) {
+      return (Type) IBaseEnum.fromId(id, ENUM_MAP, UNKNOWN);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    @JsonValue
+    public String toString() {
+      return value;
+    }
+  }
+}
