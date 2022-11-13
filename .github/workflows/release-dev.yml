@@ -5,8 +5,8 @@ on:
     types: [ opened, synchronize, reopened ]
 
 env:
-  GHUB_REPO_NAME: fpi-plugin-template  # plugin name
-  SONAR_PROJECT_KEY: vincejv_fpi-plugin-template
+  GHUB_REPO_NAME: fpi-viber-plugin  # plugin name
+  SONAR_PROJECT_KEY: vincejv_fpi-viber-plugin
 
 jobs:
 

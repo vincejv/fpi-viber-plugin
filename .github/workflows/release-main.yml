@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  SONAR_PROJECT_KEY: vincejv_fpi-plugin-template
+  SONAR_PROJECT_KEY: vincejv_fpi-viber-plugin
   DEVELOPMENT_SYNC_BRANCH: development
 
 jobs:

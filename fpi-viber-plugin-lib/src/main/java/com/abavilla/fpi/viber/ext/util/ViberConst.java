@@ -16,16 +16,10 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.     *
  ******************************************************************************/
 
-package com.abavilla.fpi.template;
+package com.abavilla.fpi.viber.ext.util;
 
-import io.quarkus.logging.Log;
+public class ViberConst {
 
-/**
- * Main class for plugins
- */
-public class TemplatePlugin {
+  private ViberConst() { }
 
-  public static void main(String[] args) {
-    Log.debug("Template Plugin");
-  }
 }

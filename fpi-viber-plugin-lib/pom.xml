@@ -35,23 +35,23 @@
   </developers>
 
   <scm>
-    <url>https://github.com/vincejv/fpi-plugin-template</url>
-    <connection>scm:git:git://github.com/vincejv/fpi-plugin-template.git</connection>
-    <developerConnection>scm:git:git@github.com:vincejv/fpi-plugin-template.git</developerConnection>
+    <url>https://github.com/vincejv/fpi-viber-plugin</url>
+    <connection>scm:git:git://github.com/vincejv/fpi-viber-plugin.git</connection>
+    <developerConnection>scm:git:git@github.com:vincejv/fpi-viber-plugin.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
 
-  <name>FPI Meta plugin core module</name>
-  <description>Plugin for FPI Framework to integrate with Meta Services</description>
-  <url>https://github.com/vincejv/fpi-plugin-template</url>
+  <name>FPI Viber plugin shared library</name>
+  <description>Plugin for FPI Framework to integrate with Viber services</description>
+  <url>https://github.com/vincejv/fpi-viber-plugin</url>
   <inceptionYear>2022</inceptionYear>
 
   <modelVersion>4.0.0</modelVersion>
-  <artifactId>fpi-plugin-template-core</artifactId>
+  <artifactId>fpi-viber-plugin-lib</artifactId>
   <version>0</version>
   
   <parent>
-    <artifactId>fpi-plugin-template</artifactId>
+    <artifactId>fpi-viber-plugin</artifactId>
     <groupId>com.abavilla</groupId>
     <version>0</version>
     <relativePath>../pom.xml</relativePath>

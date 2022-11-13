@@ -1,4 +1,4 @@
-# Abavilla FPI Template Plugin Project
+# Abavilla FPI Viber Plugin Project
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 

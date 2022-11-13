@@ -35,15 +35,15 @@
   </developers>
 
   <scm>
-    <url>https://github.com/vincejv/fpi-plugin-template</url>
-    <connection>scm:git:git://github.com/vincejv/fpi-plugin-template.git</connection>
-    <developerConnection>scm:git:git@github.com:vincejv/fpi-plugin-template.git</developerConnection>
+    <url>https://github.com/vincejv/fpi-viber-plugin</url>
+    <connection>scm:git:git://github.com/vincejv/fpi-viber-plugin.git</connection>
+    <developerConnection>scm:git:git@github.com:vincejv/fpi-viber-plugin.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
 
-  <name>FPI template plugin parent POM</name>
-  <description>Plugin for FPI Framework - template project</description>
-  <url>https://github.com/vincejv/fpi-plugin-template</url>
+  <name>FPI Viber plugin parent POM</name>
+  <description>Plugin for FPI Framework to integrate with Viber services</description>
+  <url>https://github.com/vincejv/fpi-viber-plugin</url>
   <inceptionYear>2022</inceptionYear>
   
   <parent>
@@ -53,13 +53,13 @@
   </parent>
 
   <modelVersion>4.0.0</modelVersion>
-  <artifactId>fpi-plugin-template</artifactId>
+  <artifactId>fpi-viber-plugin</artifactId>
   <packaging>pom</packaging>
   <version>0</version>
 
   <modules>
-    <module>fpi-plugin-template-lib</module>
-    <module>fpi-plugin-template-core</module>
+    <module>fpi-viber-plugin-lib</module>
+    <module>fpi-viber-plugin-core</module>
   </modules>
 
   <properties>
