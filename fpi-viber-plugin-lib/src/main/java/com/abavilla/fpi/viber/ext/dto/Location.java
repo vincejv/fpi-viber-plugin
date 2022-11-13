@@ -18,8 +18,7 @@
 
 package com.abavilla.fpi.viber.ext.dto;
 
-import com.abavilla.fpi.fw.dto.AbsDto;
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.abavilla.fpi.fw.dto.AbsFieldDto;
 import io.quarkus.runtime.annotations.RegisterForReflection;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -31,13 +30,7 @@ import lombok.ToString;
 @ToString(callSuper = true)
 @NoArgsConstructor
 @RegisterForReflection
-public class ViberUpdate extends AbsDto {
-  private String event;
-  private Long timestamp;
-  @JsonProperty("chat_hostname")
-  private String chatHostname;
-  private Long messageToken;
-  private Sender sender;
-  private Message message;
-  private Boolean silent;
+public class Location extends AbsFieldDto {
+  private double lat;
+  private double lon;
 }
