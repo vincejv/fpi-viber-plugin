@@ -27,6 +27,7 @@ import java.util.Map;
 import com.abavilla.fpi.fw.dto.AbsDto;
 import com.abavilla.fpi.fw.entity.enums.IBaseEnum;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.quarkus.runtime.annotations.RegisterForReflection;
 import lombok.AllArgsConstructor;
@@ -44,6 +45,10 @@ import lombok.ToString;
 public class Message extends AbsDto {
   private String text;
   private Type type;
+  @JsonProperty("tracking_data")
+  private String trackingData;
+  private String media;
+  private Location location;
 
   @Getter
   @AllArgsConstructor
@@ -57,7 +62,9 @@ public class Message extends AbsDto {
     LOCATION(6, "location"),
     URL(7, "url"),
     STICKER(8, "sticker"),
-    RICH_MEDIA(9, "rich_media");
+    RICH_MEDIA(9, "rich_media"),
+    CAROUSEL(10, "carousel"),
+    CONTENT(11, "content");
 
     /**
      * Ordinal id to enum mapping

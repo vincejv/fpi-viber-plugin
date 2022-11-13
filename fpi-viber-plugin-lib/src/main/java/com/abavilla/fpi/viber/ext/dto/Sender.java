@@ -18,7 +18,7 @@
 
 package com.abavilla.fpi.viber.ext.dto;
 
-import com.abavilla.fpi.fw.dto.AbsDto;
+import com.abavilla.fpi.fw.dto.AbsFieldDto;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.quarkus.runtime.annotations.RegisterForReflection;
 import lombok.Data;
@@ -31,7 +31,7 @@ import lombok.ToString;
 @ToString(callSuper = true)
 @NoArgsConstructor
 @RegisterForReflection
-public class Sender extends AbsDto {
+public class Sender extends AbsFieldDto {
   private String name;
   @JsonProperty("avatar")
   private String avatarUrl;
