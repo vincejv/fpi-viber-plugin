@@ -41,4 +41,6 @@ public class ViberUpdate extends AbsDto {
   private Sender sender;
   private Message message;
   private Boolean silent;
+  @JsonProperty("user_id")
+  private String userId;
 }
