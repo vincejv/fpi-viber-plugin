@@ -36,6 +36,7 @@ public class ViberUpdate extends AbsDto {
   private Long timestamp;
   @JsonProperty("chat_hostname")
   private String chatHostname;
+  @JsonProperty("message_token")
   private Long messageToken;
   private Sender sender;
   private Message message;
