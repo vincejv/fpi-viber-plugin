@@ -32,6 +32,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @RegisterForReflection
 public class Sender extends AbsFieldDto {
+  private String id;
   private String name;
   @JsonProperty("avatar")
   private String avatarUrl;
