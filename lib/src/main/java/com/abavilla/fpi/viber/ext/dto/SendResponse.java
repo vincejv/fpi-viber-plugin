@@ -32,13 +32,21 @@ import lombok.ToString;
 @NoArgsConstructor
 @RegisterForReflection
 public class SendResponse extends AbsDto {
+
   private Integer status;
+
   @JsonProperty("status_message")
   private String statusMsg;
+
   @JsonProperty("message_token")
   private String msgToken;
+
   @JsonProperty("chat_hostname")
   private String chatHostname;
+
   @JsonProperty("billing_status")
   private Integer billingStatus;
+
+  private Sender user;
+
 }
