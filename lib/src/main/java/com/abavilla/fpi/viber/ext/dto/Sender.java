@@ -32,12 +32,32 @@ import lombok.ToString;
 @NoArgsConstructor
 @RegisterForReflection
 public class Sender extends AbsFieldDto {
+
   private String id;
+
   private String name;
+
   @JsonProperty("avatar")
   private String avatarUrl;
+
   private String language;
+
   private String country;
+
   @JsonProperty("api_version")
   private Integer apiVersion;
+
+  @JsonProperty("primary_device_os")
+  private String deviceOS;
+
+  @JsonProperty("viber_version")
+  private String viberVersion;
+
+  private Integer mcc;
+
+  private Integer mnc;
+
+  @JsonProperty("device_type")
+  private String deviceType;
+
 }
