@@ -18,7 +18,7 @@
 
 package com.abavilla.fpi.viber.ext.codec;
 
-import com.abavilla.fpi.fw.config.codec.AbsEnumCodec;
+import com.abavilla.fpi.fw.codec.AbsEnumCodec;
 import com.abavilla.fpi.viber.ext.dto.Message;
 
 /**
